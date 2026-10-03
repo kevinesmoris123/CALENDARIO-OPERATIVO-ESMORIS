@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendario Operativo | Piscinas Esmoris</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div><strong>UNIVERSO</strong><span>PISCINAS ESMORIS</span></div>
+    <button id="exportBtn">EXPORTAR PROGRAMACIÓN</button>
+  </header>
+  <main>
+    <section class="toolbar">
+      <div class="nav"><button id="prev">‹</button><button id="today">HOY</button><button id="next">›</button></div>
+      <h1 id="monthTitle"></h1>
+      <div class="view-switch"><button class="active">MES</button><button disabled>SEMANA</button><button disabled>LISTA</button></div>
+    </section>
+    <section class="filters">
+      <label>Tipo <select id="typeFilter"><option value="all">Todos</option><option value="pool">Piscinas</option><option value="deck">Veredas</option></select></label>
+      <label>Equipo <select id="teamFilter"><option value="all">Todos</option><option>Instalaciones</option><option>Veredas</option></select></label>
+      <div class="legend"><span class="dot pool"></span> Piscina <span class="dot deck"></span> Vereda</div>
+    </section>
+    <section class="calendar-wrap">
+      <div class="weekdays"><span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span><span>DOM</span></div>
+      <div id="calendar" class="calendar"></div>
+    </section>
+  </main>
+
+  <dialog id="jobDialog">
+    <form id="jobForm" method="dialog">
+      <div class="dialog-head"><h2>NUEVO TRABAJO</h2><button type="button" id="closeDialog">×</button></div>
+      <div class="form-grid">
+        <label>Tipo de trabajo<select id="jobType" required><option value="pool">Instalación de piscina</option><option value="deck">Vereda atérmica</option></select></label>
+        <label>Fecha<input id="jobDate" type="date" required></label>
+        <label>Cliente<input id="client" required placeholder="Nombre y apellido"></label>
+        <label>Dirección<input id="address" required placeholder="Dirección de la obra"></label>
+        <label>Modelo / m²<input id="model" placeholder="Ej. Jump M 6 x 2,35 / 32 m²"></label>
+        <label>Color<input id="color" placeholder="Ej. Blanco / Travertino"></label>
+        <label>Equipo<select id="team"><option>Instalaciones</option><option>Veredas</option></select></label>
+        <label>Estado<select id="status"><option>Programado</option><option>Confirmado</option><option>En curso</option><option>Finalizado</option><option>Reprogramar</option></select></label>
+        <label class="wide">Accesorios / materiales<textarea id="materials" rows="2"></textarea></label>
+        <label class="wide">Observaciones<textarea id="notes" rows="3"></textarea></label>
+      </div>
+      <div class="dialog-actions"><button type="button" id="cancel">CANCELAR</button><button class="primary" type="submit">GUARDAR TRABAJO</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="exportDialog">
+    <form method="dialog">
+      <div class="dialog-head"><h2>EXPORTAR PROGRAMACIÓN</h2><button type="button" id="closeExport">×</button></div>
+      <p>Primera versión: la vista de exportación resumida se habilitará en la siguiente etapa.</p>
+      <div class="dialog-actions"><button>ACEPTAR</button></div>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
