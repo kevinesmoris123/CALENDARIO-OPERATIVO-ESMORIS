@@ -1,0 +1,14 @@
+{
+  "name": "Calendario Operativo - Piscinas Esmoris",
+  "short_name": "Calendario Esmoris",
+  "description": "Programación de instalaciones de piscinas y veredas de Universo Piscinas Esmoris",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fa",
+  "theme_color": "#153f6b",
+  "lang": "es-AR",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
