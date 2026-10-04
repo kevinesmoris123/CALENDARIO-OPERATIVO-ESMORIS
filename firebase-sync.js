@@ -17,7 +17,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAd5AVGqobu4qcfNrPZ1Dw1spiZPZ6KM0",
+  apiKey: "AIzaSyAd5AVGAobuv4qcfNrPZ1Dw1spiZPZ6KMQ",
   authDomain: "calendario-operativo-esmoris.firebaseapp.com",
   projectId: "calendario-operativo-esmoris",
   storageBucket: "calendario-operativo-esmoris.firebasestorage.app",
